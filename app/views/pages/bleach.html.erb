@@ -1,0 +1,23 @@
+<% provide(:title, @page.name) %>
+<div class="wrap_content">
+  <div class="whitener_wrap">
+    <h1 class="whitener_name">Отбеливание <%= @page.name %></h1>
+    <%= raw @page.left_content %>
+  </div>
+  <%= raw @page.right_content %>
+  <div class="wrap_visual">
+    <% @menu_bleach.each_with_index do |bleach , i|%>
+      <% if @menu_bleach[i].slug==@page.slug %>
+        <div class="goods_name no_margin_top color<%=i+1%>"><%= @page.name.upcase %></div>
+        <div class="goods_pict">
+          <img src="assets/bleach_<%=i+1%>.jpg" />
+        </div>
+        <div class="div_for_price<%=i+1%> ">
+          <%= @page.bleach_images.first.price %>
+          <i class="fa fa-rub"></i>
+        </div>
+      <% end %>
+    <% end %>
+    <div class="shadow">&nbsp;</div>
+  </div>
+</div>

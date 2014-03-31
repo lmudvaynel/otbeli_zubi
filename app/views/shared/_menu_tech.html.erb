@@ -1,0 +1,5 @@
+<% @menu_tech.each do |m| %>
+  <li>
+    <%= link_to m.name, page_slug_path(m.slug) %>
+  </li>
+<% end %>

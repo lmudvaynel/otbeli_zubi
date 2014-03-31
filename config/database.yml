@@ -1,0 +1,23 @@
+development:
+  adapter: mysql2
+  encoding: utf8
+  database: zubi_dev
+  username: root
+  password: '123'
+
+test: &test
+  adapter: mysql2
+  encoding: utf8
+  database: zubi_test
+  username: root
+  password: '123'
+
+production:
+  adapter: mysql2
+  encoding: utf8
+  database: zubi_prod
+  username: root
+  password: '123'
+
+cucumber:
+  <<: *test

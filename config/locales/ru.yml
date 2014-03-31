@@ -1,0 +1,137 @@
+ru:
+   date:
+     month_names: [~, Января, Февраля, Марта, Апреля, Мая, Июня, Июля, Августа, Сентября, Октября, Ноября, Декабря]
+   active_admin:
+     devise:
+       email:
+         title: "Емайл"
+       password:
+         title: "Пароль"
+   footer:
+     text: "Компания"
+   mailer:
+     email: "Введите ваш e-mail"
+     message: "Введите ваше сообщение"
+     send: "Отправить"
+   js:
+     project_prefix: "/ru"
+     wrong_email: "Введите правильный e-mail"
+     short_message: "Ваше сообщение cлишком короткое"
+     send_success: "Ваше сообщение успешно отправлено"
+     send_error: "Произошла ошибка"
+   translation:
+     en: "English"
+     ru: "Русский"
+   activerecord:
+     models:
+       admin_user:
+         zero:  Администраторов
+         one:   Администратор
+         few:   Администраторa
+         many:  Администраторов
+         other: Администраторы
+       feedback:
+         Обратная связь
+       page:
+         zero: Страниц
+         one: Страница
+         few: Страницы
+         many: Страниц
+         other: Страницы
+       template:
+          zero: Шаблонов
+          one: Шаблон
+          few: Шаблоны
+          many: Шаблонов
+          other: Шаблоны 
+       order:
+          zero: Заказов
+          one: Заказ
+          few: Заказов
+          many: Заказов
+          other: Заказы
+       comment:
+          zero: Комментариев
+          one: Комментарий
+          few: Комментариев
+          many: Комментариев
+          other: Комментарии
+       news:
+          zero: Новостей
+          one: Новость
+          few: Новостей
+          many: Новостей
+          other: Новости
+
+       seo:
+         СЕО
+     attributes:
+       admin_user:
+         id: Номер
+         email: Емайл
+         current_sign_in_at: Время текущего входа
+         last_sign_in_at: Врема последнего входа
+         current_sign_in_ip: Текущий IP
+         last_sign_in_ip: Последний IP
+         created_at: Дата создания
+         updated_at: Дата обновления
+         sign_in_count: Число входов
+         password: Пароль
+         password_confirmation: Подтверждение пароля
+       feedback:
+         id: Номер
+         email: Емайл
+         message: Сообщение
+         created_at: Дата создания
+         updated_at: Дата обновления
+       template:
+         id: Номер
+         name: Название
+         content: Содержание
+         created_at: Дата создания
+         updated_at: Дата обновления
+       page:
+         ancestry: Родительская страница
+         created_at: Дата создания
+         hidden: Скрытая
+         id: Номер
+         template: Шаблон для страницы
+         name: Заголовок
+         parent: Родительская страница
+         parent_id: Родительская страница
+         position: Позиция
+         slug: Псевдоним
+         updated_at: Дата обновления
+         content: Содержание
+         gallery_top_name: Название верхней галереи
+         gallery_bot_name: Название нижней галереи
+       order:
+          name: Имя
+          company: Компания
+          phone: Номер телефона
+          content: Описание заказа
+          email: E-Mail
+       seo:
+         title: Заголовок
+         keywords: Ключевые слова
+         description: Описание
+         created_at: Дата создания
+         updated_at: Дата обновления
+       size_price:
+         size: Размеры
+         price: Цена
+         color: Цвет
+         weight: Вес
+       stand:
+         content: Описание стенда
+       gallery_top:
+         image: Изображение
+         alt: Описание (при открытии)
+         title: Название (при наведении)
+       gallery_bot:
+         image: Изображение
+         alt: Описание (при открытии)
+         title: Название (при наведении)
+       news:
+         content: Содержание
+         published_at: дата публикации

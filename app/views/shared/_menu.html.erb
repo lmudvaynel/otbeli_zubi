@@ -1,0 +1,18 @@
+<div class="wrap_menu menu_margin">
+  <ul id="menu">
+    <li><%= link_to "Технология", page_slug_path("technology"), title: "Технологии отбеливания зубов" %>
+      <ul>
+        <li>
+          <%= link_to "Общая информация", page_slug_path("technology") %>
+        </li>
+        <%=render 'shared/menu_tech'%>
+      </ul>
+    </li>
+    <li>
+      <%= link_to "История", page_slug_path("history") %>
+    </li>
+    <li>
+      <%= link_to "Контакты", page_slug_path("contacts") %>
+    </li>       
+  </ul>
+</div>

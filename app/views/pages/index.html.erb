@@ -1,0 +1,60 @@
+<% provide(:title, @page.name) %>
+<div class="wrap_pict_menu">
+  <div class="pict_menu">
+    <% @menu_bleach.each_with_index do |bl,i| %>
+      <%= link_to bl.slug do %>
+        <div  id="link<%=i+1%>" 
+              class="page_link<%=i+1%>" 
+              onmouseover="my_1(<%=i+1%>)" 
+              onmouseout="my_2(<%=i+1%>)">
+        </div>      
+        <div class="wrap_goods" style="background: url(<%=bl.bleach_images.first.image.url%>)">
+          <div class="price price<%=i+1%> color<%=i+1%>">
+            <%= link_to bl.bleach_images.first.price, page_slug_path("bleach_"+i.to_s), class: "color"+((i+1).to_s)+" no_underline" %>
+            <i class="fa fa-rub"></i>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="wrap_goods_name">
+    <% @menu_bleach.each_with_index do |bl,i| %>
+      <div class="name_good color<%=i+1%>">
+        <%=link_to bl.name, page_slug_path(bl.slug),
+            class: "color"+((i+1).to_s)+" no_underline",
+            id: "capt"+(i+1).to_s, 
+            onmouseover: "my_3("+((i+1).to_s)+")",
+            onmouseout: "my_4("+((i+1).to_s)+")" %>
+      </div> 
+    <% end %>
+  </div>
+</div>
+<div class="wrap_content">
+  <div class="content">
+    <div class="wrap_consultant">
+      <h3 class="content_title">Вас консультирует</h3>
+      <%= raw @page.left_content %>
+    </div>
+    <div class="news">
+      <h3 class="content_title">Новости</h3>
+      <div class="news_box">
+        <% @news.each do |news| %>
+          <div class="news_wrap">
+            <span class="date">
+              <%= localize news.published_at, :format => ("%d %B %Y") %> </span>
+            <p class="news_content"> <%= news.content %></p>
+          </div>
+        <% end %>
+        </div>
+      <div class="follow">Будьте с нами:</div>
+      <div class="social">
+        <a class="facebook" href="https://www.facebook.com/philipp.smirnov.52" target="_blank"></a>
+        <a class="twitter" href="http://instagram.com/fililipp" target="_blank"></a>
+        <a class="vk" href="http://vk.com/id3856651" target="_blank"></a>
+      </div>
+    </div>
+    <div class="information">
+      <%= raw @page.right_content %>
+    </div>
+  </div>
+</div>
