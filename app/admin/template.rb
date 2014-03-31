@@ -1,7 +1,7 @@
 # encoding: utf-8
 ActiveAdmin.register Template do
   menu :priority => 0  
-  actions :all, :except => [:destroy, :new]
+
   index do
     column :name
     column :content
