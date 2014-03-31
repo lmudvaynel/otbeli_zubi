@@ -38,7 +38,9 @@ ActiveAdmin.register Page do
       f.input :parent_id, as: :select,
         collection: Hash[Page.all.map{|page| ["#{page.name}", page.id]}] 
       f.input :left_content, as: :ckeditor 
-      f.input :right_content, as: :ckeditor 
+      if f.object.slug != "contacts" and f.object.slug != "history_8" and !(f.object.slug =~ /technology+(_\d+|)/)
+        f.input :right_content, as: :ckeditor
+      end
     end 
 
     if f.object.slug =~ /bleach+(_\d+|)/

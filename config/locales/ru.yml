@@ -103,8 +103,8 @@ ru:
          slug: Псевдоним
          updated_at: Дата обновления
          content: Содержание
-         gallery_top_name: Название верхней галереи
-         gallery_bot_name: Название нижней галереи
+         left_content: Содержание слева
+         right_content: Содержание справа
        order:
           name: Имя
           company: Компания
@@ -134,4 +134,4 @@ ru:
          title: Название (при наведении)
        news:
          content: Содержание
-         published_at: дата публикации
+         published_at: Дата публикации
